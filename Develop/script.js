@@ -1,10 +1,10 @@
 // Assignment code here
 
 function generatePassword(){
-  var upperalpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  var loweralpha = "abcdefghijklmnopqrstuvwxyz"
-  var numbers = "0123456789"
-  var symbols = "!@#$%^&*()_+-="
+  const upperalpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  const loweralpha = "abcdefghijklmnopqrstuvwxyz"
+  const numbers = "0123456789"
+  const symbols = "!@#$%^&*()_+-="
 }
 
 character = prompt("How long would you want your password? Choose between 8 - 128 charaters.")
@@ -16,6 +16,13 @@ if (character < 8 || character > 128){
 } else { 
   alert ("your password will be " + character + " character long." )
 }
+
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  for
+}
+
+
 
 //uppercase
 wantuppercase = confirm("do you want uppercase characters?");
@@ -56,6 +63,20 @@ if(wantsymbols){
 else {
   alert("will not have symbol characters.")
 }
+
+if (wantuppercase){
+  possibleCharacters = querySelector.const(upperalpha)
+}
+if (wantlowercase){
+  possibleCharacters = querySelector.const(loweralpha)
+}
+if (wantnumbers){
+  possibleCharacters = querySelector.const(numbers)
+}
+if (wantsymbols){
+  possibleCharacters = querySelector.const(symbols)
+}
+
 
 
 
