@@ -1,11 +1,13 @@
 // Assignment code here
 
+
 function generatePassword(){
-  const upperalpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  const loweralpha = "abcdefghijklmnopqrstuvwxyz"
-  const numbers = "0123456789"
-  const symbols = "!@#$%^&*()_+-="
-}
+
+//prompted for the length of the password THEN I choose a length of at least 8 characters and no more than 128 characters
+//asked for character types to include in the password 
+//THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters WHEN I answer each prompt
+//my input should be validated and at least one character type should be selected WHEN all prompts are answered
+
 
 character = prompt("How long would you want your password? Choose between 8 - 128 charaters.")
 
@@ -17,11 +19,13 @@ if (character < 8 || character > 128){
   alert ("your password will be " + character + " character long." )
 }
 
-for (let index = 0; index < array.length; index++) {
-  const element = array[index];
-  for
+//characters
+var querySelector = {
+   upperalpha: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+   loweralpha: "abcdefghijklmnopqrstuvwxyz",
+   numbers: "0123456789",
+   symbols: "!@#$%^&*()_+"
 }
-
 
 
 //uppercase
@@ -60,27 +64,20 @@ wantsymbols = confirm("do you want symbol characters?");
 if(wantsymbols){
   var symbol = alert(" your password will have symbol characters.")
 }
-else {
+ else {
   alert("will not have symbol characters.")
 }
 
-if (wantuppercase){
-  possibleCharacters = querySelector.const(upperalpha)
-}
-if (wantlowercase){
-  possibleCharacters = querySelector.const(loweralpha)
-}
-if (wantnumbers){
-  possibleCharacters = querySelector.const(numbers)
-}
-if (wantsymbols){
-  possibleCharacters = querySelector.const(symbols)
+//randomizer
+for (var i = 0; i < querySelector.length; i++) {
+   var randomNumber = math.floor(math.random() * querySelector.length);
+   password += querySelector.substring(randomNumber, randomNumber +1)
 }
 
+console.log("something happend")
 
-
-
-
+return "text"
+}
 
 
 // Get references to the #generate element
