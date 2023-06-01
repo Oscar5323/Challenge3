@@ -12,15 +12,16 @@ function generatePassword(){
 character = prompt("How long would you want your password? Choose between 8 - 128 charaters.")
 
 if (character < 8 || character > 128){
-  alert ("please choose a valid number");
+  return "please choose a valid number";
 } else if (isNaN(character)) {
-  character = alert("please choose a valid number")
+  return "please choose a valid number";
 } else { 
   alert ("your password will be " + character + " character long." )
+  
 }
 
 //characters
-var querySelector = {
+var char = {
    upperalpha: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
    loweralpha: "abcdefghijklmnopqrstuvwxyz",
    numbers: "0123456789",
