@@ -46,14 +46,14 @@ if(confirm("do you want special characters?")){
   choice = choice.concat(symbols)
 }
 
-var password="";
+var password2="";
 
 for (let i = 0; i < character.length; i++) {
   var random = choice[Math.floor(Math.random()* choice.length)]
-  password = password += random
+  password2 = password2 += random
 }
 
-return password
+return password2
 
 }
 
