@@ -1,4 +1,13 @@
 // Assignment code here
+//characters
+
+var choice=[]
+
+
+var upperalpha= ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var loweralpha= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var numbers= ['1','2','3','4','5','6','7','8','9','0'];
+var symbols= ['!','@','#','$','%','^','&','*','(',')','_','+']
 
 
 function generatePassword(){
@@ -11,73 +20,41 @@ function generatePassword(){
 
 character = prompt("How long would you want your password? Choose between 8 - 128 charaters.")
 
+choice=[];
+
 if (character < 8 || character > 128){
   return "please choose a valid number";
 } else if (isNaN(character)) {
   return "please choose a valid number";
 } else { 
   alert ("your password will be " + character + " character long." )
-  
 }
 
-//characters
-var char = {
-   upperalpha: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-   loweralpha: "abcdefghijklmnopqrstuvwxyz",
-   numbers: "0123456789",
-   symbols: "!@#$%^&*()_+"
+if(confirm("do you want uppercase characters?")){
+  choice = choice.concat(upperalpha)
 }
 
-
-//uppercase
-wantuppercase = confirm("do you want uppercase characters?");
-
-if(wantuppercase){
-  var uppercase = alert(" your password will have uppercase characters.")
-}
-else {
-  alert("will not have uppercase characters.")
+if(confirm("do you want lowercase characters?")){
+  choice = choice.concat(loweralpha)
 }
 
-//lowercase
-wantlowercase = confirm("do you want lowercase characters?");
-
-if(wantlowercase){
-  var lowercase = alert(" your password will have lowercase characters.")
-}
-else {
-  alert("will not have lowercase characters.")
+if(confirm("do you want numbers?")){
+  choice = choice.concat(numbers)
 }
 
-//numbers
-wantnumbers = confirm("do you want number characters?");
-
-if(wantnumbers){
-  var number = alert(" your password will have number characters.")
-}
-else {
-  alert("will not have number characters.")
+if(confirm("do you want special characters?")){
+  choice = choice.concat(symbols)
 }
 
-//symbols
-wantsymbols = confirm("do you want symbol characters?");
+var password="";
 
-if(wantsymbols){
-  var symbol = alert(" your password will have symbol characters.")
-}
- else {
-  alert("will not have symbol characters.")
+for (let i = 0; i < character.length; i++) {
+  var random = choice[Math.floor(Math.random()* choice.length)]
+  password = password += random
 }
 
-//randomizer
-for (var i = 0; i < querySelector.length; i++) {
-   var randomNumber = math.floor(math.random() * querySelector.length);
-   password += querySelector.substring(randomNumber, randomNumber +1)
-}
+return password
 
-console.log("something happend")
-
-return "text"
 }
 
 
