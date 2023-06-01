@@ -20,11 +20,15 @@ function generatePassword(){
 
 character = prompt("How long would you want your password? Choose between 8 - 128 charaters.")
 
+// this resets the choices back to zero
 choice=[];
 
+//character option has to be in digits
 if (character < 8 || character > 128){
+  //return will stop the flow if anything besides 8-128 is put
   return "please choose a valid number";
 } else if (isNaN(character)) {
+  // will stop the flow is anything besides a digit is put
   return "please choose a valid number";
 } else { 
   alert ("your password will be " + character + " character long." )
@@ -48,11 +52,12 @@ if(confirm("do you want special characters?")){
 
 var password2="";
 
-for (let i = 0; i < character.length; i++) {
+for (let i = 0; i < character; i++) {
   var random = choice[Math.floor(Math.random()* choice.length)]
   password2 = password2 += random
 }
 
+//password generated
 return password2
 
 }
