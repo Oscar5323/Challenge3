@@ -7,3 +7,9 @@ After looking at https://www.w3schools.com and https://developer.mozilla.org to 
 
 ## site
 
+
+
+
+## pictures
+
+
